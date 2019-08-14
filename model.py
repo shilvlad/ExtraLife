@@ -1,5 +1,5 @@
 import random, time
-import config, params
+import config
 
 
 def time_of_function(function):
@@ -93,17 +93,24 @@ class cWorld:
     # Дальний горизонт
     def GetFarHorizonSensors(self, x, y, index):
         if x + config.FAR_HORIZON[index][0] < 0:
-            X = config.WORLD_SIZE_X + config.FAR_HORIZON[index][0]+1
+            X = x + config.FAR_HORIZON[index][0] + config.WORLD_SIZE_X
+        elif x + config.FAR_HORIZON[index][0] >= config.WORLD_SIZE_X:
+            X = x + config.FAR_HORIZON[index][0] - config.WORLD_SIZE_X
         else:
             X = x + config.FAR_HORIZON[index][0]
 
+
+
         if y + config.FAR_HORIZON[index][1] < 0:
-            Y = config.WORLD_SIZE_Y + config.FAR_HORIZON[index][1]+1
+            Y = y + config.FAR_HORIZON[index][1] + config.WORLD_SIZE_Y
+        elif y + config.FAR_HORIZON[index][1] >= config.WORLD_SIZE_Y:
+            Y = y + config.FAR_HORIZON[index][1] - config.WORLD_SIZE_Y
         else:
             Y = y + config.FAR_HORIZON[index][1]
 
         return self.GetInhabitantType( X, Y)
 
+    # Ближний горизонт
     def GetNearHorizonSensors(self, x, y, index):
         if x + config.NEAR_HORIZON[index][0] < 0:
             X = config.WORLD_SIZE_X + config.NEAR_HORIZON[index][0]+1

@@ -1,6 +1,6 @@
 #Размер мира
-WORLD_SIZE_X = 100
-WORLD_SIZE_Y = 100
+WORLD_SIZE_X = 5
+WORLD_SIZE_Y = 5
 
 # Дискретность мира
 DISCRETENESS = 1
@@ -19,9 +19,9 @@ TYPE_HERBIVORES = 2
 TYPE_GRASS = 3
 
 # Начальные объемы населения
-POWER_GRASS = 3000
-POWER_PREDATOR = 1000
-POWER_HERBIVORES = 1000
+POWER_GRASS = 0
+POWER_PREDATOR = 4
+POWER_HERBIVORES = 4
 
 
 # Координаты дальнего горизонта
