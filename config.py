@@ -1,12 +1,12 @@
 #Размер мира
-WORLD_SIZE_X = 5
-WORLD_SIZE_Y = 5
+WORLD_SIZE_X = 20
+WORLD_SIZE_Y = 20
 
 # Дискретность мира
-DISCRETENESS = 1
+DISCRETENESS = 35
 
 # Количство кадров в секунду
-FPS = 60
+FPS = 1
 
 # Цвета объектов
 PREDATOR_COLOR = (255,0,0)
@@ -23,6 +23,22 @@ POWER_GRASS = 0
 POWER_PREDATOR = 4
 POWER_HERBIVORES = 4
 
+
+# Максимальные жизни
+MAX_GRASS_LIFE = 15 # Deprecated
+MAX_HERBIVORE_LIFE=100
+MAX_PREDATOR_LIFE = 100
+
+
+# Максимальный возраст
+MAX_GRASS_AGE = 15
+MAX_HERBIVORE_AGE=100
+MAX_PREDATOR_AGE = 100
+
+
+# Продуктивный возраст
+MAX_PRODUCTIVITY_AGE = 80
+MIN_PRODUCTIVITY_AGE = 20
 
 # Координаты дальнего горизонта
 FAR_HORIZON = [
